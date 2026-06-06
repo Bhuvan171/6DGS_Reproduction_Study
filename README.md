@@ -191,25 +191,7 @@ gaussian-splatting/
 
 All subdirectories required to run training and rendering are listed below.
 
-### Required Subdirectories
 
-| Path (relative to `gaussian-splatting/`) | Role | Required? |
-|---|---|---|
-| `scene/` | Dataset readers, `GaussianModel` (core 6D model) | ✅ Yes |
-| `gaussian_renderer/` | Render pipeline with 6D→3D slicing hook | ✅ Yes |
-| `arguments/` | `ModelParams`, `OptimizationParams`, `PipelineParams` argument parsers | ✅ Yes |
-| `utils/` | Loss functions (`l1_loss`, `ssim`), image utilities (`psnr`), SH utilities | ✅ Yes |
-| `lpipsPyTorch/` | LPIPS perceptual metric (used in `training_report` and `metrics.py`) | ✅ Yes |
-| `submodules/diff-gaussian-rasterization/` | Compiled CUDA tile rasterizer — must be `pip install`'d before training | ✅ Yes |
-| `submodules/simple-knn/` | KNN-based point cloud initialisation — must be `pip install`'d before training | ✅ Yes |
-| `output/` | Auto-created by `train.py`; stores checkpoints, TensorBoard logs, renders | ✅ Auto-created |
-| `submodules/fused-ssim/` | Optional fused SSIM kernel — not required; falls back to Python SSIM | ⚠️ Optional |
-| `SIBR_viewers/` | Interactive real-time viewer — not required for training or evaluation | ❌ Optional |
-| `assets/` | Documentation images for the original 3DGS README — not required | ❌ Optional |
-
-The dataset directory `../6dgs-pbr/` (one level above `gaussian-splatting/`) must also be present. See the [Dataset](#dataset) section above.
-
----
 
 ## Future Work
 
