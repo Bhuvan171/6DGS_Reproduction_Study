@@ -1,0 +1,15 @@
+# Training outputs
+output/
+
+# Not needed for reproduction study
+SIBR_viewers/
+assets/
+
+# Compiled CUDA extensions
+*.so
+*.egg-info/
+build/
+__pycache__/
+
+# Scratch scripts
+get_metrics.py
